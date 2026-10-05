@@ -1,0 +1,1818 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+:root {
+
+    --bg-dark: #080808;
+    --bg-black: #050505;
+
+    --red: #e50914;
+    --red-light: #ff1b26;
+    --red-dark: #b80710;
+
+    --text-white: #ffffff;
+    --text-gray: #bdbdbd;
+
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: auto;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background:
+        #050505;
+
+    color:
+        #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x:
+        hidden;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.main-header {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 80px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.98),
+            rgba(8, 8, 8, 0.94)
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.65);
+
+    z-index: 1000;
+
+}
+
+
+.header-container {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =========================================
+   HEADER LEFT
+========================================= */
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-width: 0;
+
+}
+
+
+/* =========================================
+   HAMBURGER
+========================================= */
+
+.hamburger-btn {
+
+    width: 48px;
+
+    height: 48px;
+
+    margin-left: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-left: none;
+
+    border-radius:
+        0 8px 8px 0;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.hamburger-btn span {
+
+    display: block;
+
+    width: 22px;
+
+    height: 2px;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+}
+
+
+.hamburger-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(229, 9, 20, 0.12);
+
+    border-color:
+        rgba(229, 9, 20, 0.65);
+
+    box-shadow:
+        0 7px 18px
+        rgba(229, 9, 20, 0.22);
+
+}
+
+
+.hamburger-btn:hover span {
+
+    background:
+        var(--red-light);
+
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color:
+        var(--red);
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+}
+
+
+.brand-logo {
+
+    position: relative;
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1b26,
+            #b80710
+        );
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px
+        rgba(229, 9, 20, 0.35);
+
+}
+
+
+.brand-logo span {
+
+    position: absolute;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    font-style: italic;
+
+}
+
+
+.brand-logo span:first-child {
+
+    transform:
+        translate(-5px, -1px);
+
+}
+
+
+.brand-logo span:last-child {
+
+    transform:
+        translate(5px, 3px);
+
+    color:
+        #ffb0b3;
+
+}
+
+
+.brand-name {
+
+    color:
+        var(--red);
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.search-box {
+
+    height: 44px;
+
+    width: 350px;
+
+    margin-left: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.search-box:focus-within {
+
+    border-color:
+        rgba(229, 9, 20, 0.75);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(229, 9, 20, 0.10);
+
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    padding:
+        0 15px;
+
+    border: none;
+
+    outline: none;
+
+    background:
+        transparent;
+
+    color:
+        #ffffff;
+
+    font-size: 14px;
+
+}
+
+
+.search-box input::placeholder {
+
+    color:
+        #969696;
+
+}
+
+
+.search-btn {
+
+    height: 100%;
+
+    padding:
+        0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: none;
+
+    background:
+        var(--red);
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.search-btn:hover {
+
+    background:
+        var(--red-light);
+
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-left: auto;
+
+}
+
+
+.login-btn {
+
+    min-width: 125px;
+
+    height: 46px;
+
+    margin-right: 18px;
+
+    padding:
+        0 25px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius:
+        50px;
+
+    background:
+        var(--red);
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.login-btn:hover {
+
+    background:
+        var(--red-light);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(229, 9, 20, 0.40);
+
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+
+    position: absolute;
+
+    top: 80px;
+
+    left: 0;
+
+    width: 260px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    background:
+        rgba(10, 10, 10, 0.98);
+
+    border-right:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.65);
+
+    transform:
+        translateX(-110%);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.mobile-menu.open {
+
+    transform:
+        translateX(0);
+
+}
+
+
+.mobile-menu a {
+
+    padding:
+        13px 15px;
+
+    color:
+        #d4d4d4;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+}
+
+
+.mobile-menu a:hover {
+
+    background:
+        rgba(229, 9, 20, 0.12);
+
+    color:
+        var(--red-light);
+
+}
+
+
+/* =========================================
+   HERO CAROUSEL
+========================================= */
+
+.hero-carousel {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 620px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.7);
+
+}
+
+
+.hero-carousel .carousel-item {
+
+    position: relative;
+
+    height: 620px;
+
+    background:
+        #000;
+
+}
+
+
+.hero-video {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+
+    background:
+        #000;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.93) 0%,
+            rgba(0, 0, 0, 0.78) 25%,
+            rgba(0, 0, 0, 0.50) 50%,
+            rgba(0, 0, 0, 0.20) 75%,
+            rgba(0, 0, 0, 0.10) 100%
+        );
+
+}
+
+
+.hero-overlay::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 220px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.90),
+            transparent
+        );
+
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 8%;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 650px;
+
+    max-width: 70%;
+
+    color:
+        #ffffff;
+
+}
+
+
+.hero-small-text {
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    color:
+        #dddddd;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.hero-content h1 {
+
+    margin:
+        0 0 22px;
+
+    font-size: 58px;
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.hero-content h1 span {
+
+    color:
+        var(--red);
+
+}
+
+
+.hero-content p {
+
+    margin:
+        0 0 32px;
+
+    max-width: 570px;
+
+    color:
+        #eeeeee;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+}
+
+
+.hero-btn {
+
+    display: inline-block;
+
+    padding:
+        15px 30px;
+
+    background:
+        var(--red);
+
+    color:
+        #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    border-radius: 50px;
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+.hero-btn:hover {
+
+    background:
+        var(--red-light);
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(229, 9, 20, 0.55);
+
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+
+    z-index: 10;
+
+    width: 8%;
+
+}
+
+
+.carousel-indicators {
+
+    z-index: 10;
+
+    margin-bottom: 25px;
+
+}
+
+
+.carousel-indicators button {
+
+    width: 30px;
+
+    height: 4px;
+
+    margin: 0 4px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+
+}
+
+
+.carousel-indicators button.active {
+
+    width: 50px;
+
+    background:
+        var(--red);
+
+}
+
+
+/* =========================================
+   PREMIUM SECTION
+========================================= */
+
+.premium-section {
+
+    width: 100%;
+
+    padding:
+        100px 20px 110px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(229, 9, 20, 0.12),
+            transparent 35%
+        ),
+        #050505;
+
+}
+
+
+.premium-header {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.premium-tag {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding:
+        7px 16px;
+
+    border:
+        1px solid
+        rgba(229, 9, 20, 0.5);
+
+    border-radius: 50px;
+
+    color:
+        var(--red-light);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.premium-header h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(42px, 6vw, 72px);
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+}
+
+
+.premium-header h2 span {
+
+    color:
+        var(--red);
+
+}
+
+
+.premium-header p {
+
+    max-width: 600px;
+
+    margin:
+        18px auto 0;
+
+    color:
+        #a8a8a8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   BILLING TOGGLE
+========================================= */
+
+.billing-toggle {
+
+    width:
+        min(100%, 400px);
+
+    height: 86px;
+
+    margin:
+        0 auto 55px;
+
+    padding: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border:
+        1px solid
+        rgba(229, 9, 20, 0.75);
+
+    border-radius: 50px;
+
+    background:
+        #080808;
+
+}
+
+
+.billing-btn {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    border-radius: 45px;
+
+    background:
+        transparent;
+
+    color:
+        #d4d4d4;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+.billing-btn small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.billing-btn.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red-light),
+            var(--red-dark)
+        );
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 8px 25px
+        rgba(229, 9, 20, 0.30);
+
+}
+
+
+/* =========================================
+   PLAN CONTAINER
+========================================= */
+
+.plans-container {
+
+    width:
+        min(100%, 900px);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =========================================
+   PLAN CARD
+========================================= */
+
+.plan-card {
+
+    min-height: 570px;
+
+    padding:
+        45px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border:
+        1px solid
+        rgba(229, 9, 20, 0.75);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 15, 15, 0.98),
+            rgba(5, 5, 5, 0.98)
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.plan-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(229, 9, 20, 0.15);
+
+}
+
+
+.featured-plan {
+
+    border-color:
+        var(--red-light);
+
+}
+
+
+.popular-badge {
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color:
+        var(--red-light);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.plan-top {
+
+    margin-bottom: 28px;
+
+}
+
+
+.plan-top h3 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size: 40px;
+
+    font-weight: 900;
+
+}
+
+
+.plan-price {
+
+    color:
+        #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+}
+
+
+.plan-price span {
+
+    color:
+        #a5a5a5;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   PLAN BUTTONS
+========================================= */
+
+.trial-btn {
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-bottom: 12px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.outline-btn {
+
+    border:
+        1px solid
+        var(--red);
+
+    background:
+        transparent;
+
+    color:
+        var(--red-light);
+
+}
+
+
+.featured-btn {
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red-light),
+            var(--red)
+        );
+
+    color:
+        #ffffff;
+
+}
+
+
+.trial-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(229, 9, 20, 0.30);
+
+}
+
+
+.skip-btn {
+
+    margin-bottom: 30px;
+
+    border: none;
+
+    background:
+        transparent;
+
+    color:
+        #9e9e9e;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.skip-btn:hover {
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================
+   PLAN FEATURES
+========================================= */
+
+.plan-features {
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    list-style: none;
+
+}
+
+
+.plan-features li {
+
+    position: relative;
+
+    padding-left: 30px;
+
+    color:
+        #d0d0d0;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+}
+
+
+.plan-features li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color:
+        var(--red-light);
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+}
+
+
+.plan-features strong {
+
+    color:
+        var(--red-light);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.main-footer {
+
+    padding:
+        70px 65px 25px;
+
+    background:
+        #020304;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+}
+
+
+.footer-container {
+
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 45px;
+
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.footer-column h3 {
+
+    margin:
+        0 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+}
+
+
+.footer-column a {
+
+    margin-bottom: 13px;
+
+    color:
+        #9b9b9b;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    line-height: 1.45;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.footer-column a:hover {
+
+    color:
+        var(--red-light);
+
+    transform:
+        translateX(4px);
+
+}
+
+
+.connect-heading {
+
+    margin-top: 28px !important;
+
+}
+
+
+.footer-bottom {
+
+    max-width: 1500px;
+
+    margin:
+        40px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color:
+        #666666;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .header-left {
+
+        gap: 14px;
+
+    }
+
+
+    .search-box {
+
+        width: 290px;
+
+        margin-left: 15px;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 18px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .main-header {
+
+        height: 70px;
+
+    }
+
+
+    .header-left {
+
+        gap: 8px;
+
+    }
+
+
+    .hamburger-btn {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .brand-name {
+
+        display: none;
+
+    }
+
+
+    .search-box {
+
+        width: 230px;
+
+        height: 40px;
+
+        margin-left: 4px;
+
+    }
+
+
+    .search-box input {
+
+        font-size: 12px;
+
+        padding: 0 10px;
+
+    }
+
+
+    .search-btn {
+
+        padding: 0 12px;
+
+    }
+
+
+    .search-btn span {
+
+        display: none;
+
+    }
+
+
+    .login-btn {
+
+        min-width: auto;
+
+        height: 40px;
+
+        margin-right: 8px;
+
+        padding: 0 14px;
+
+        font-size: 11px;
+
+    }
+
+
+    .mobile-menu {
+
+        top: 70px;
+
+    }
+
+
+    .hero-carousel,
+    .hero-carousel .carousel-item {
+
+        height: 520px;
+
+    }
+
+
+    .hero-content {
+
+        left: 7%;
+
+        right: 7%;
+
+        width: auto;
+
+        max-width: 86%;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 15px;
+
+    }
+
+
+    .premium-section {
+
+        padding:
+            75px 20px;
+
+    }
+
+
+    .plans-container {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            520px;
+
+    }
+
+
+    .plan-card {
+
+        min-height: auto;
+
+    }
+
+
+    .premium-header h2 {
+
+        font-size: 46px;
+
+    }
+
+
+    .main-footer {
+
+        padding:
+            60px 30px 25px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            35px 25px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hamburger-btn {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 34px;
+
+        height: 34px;
+
+    }
+
+
+    .search-box {
+
+        width: 145px;
+
+    }
+
+
+    .login-btn {
+
+        height: 38px;
+
+        margin-right: 5px;
+
+        padding: 0 10px;
+
+        font-size: 10px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .billing-toggle {
+
+        height: 76px;
+
+    }
+
+
+    .billing-btn {
+
+        font-size: 14px;
+
+    }
+
+
+    .billing-btn small {
+
+        font-size: 8px;
+
+    }
+
+
+    .plan-card {
+
+        padding:
+            35px 20px;
+
+    }
+
+
+    .plan-top h3 {
+
+        font-size: 34px;
+
+    }
+
+
+    .main-footer {
+
+        padding:
+            50px 20px 20px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
